@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Divisibility Checker</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="head">
+			<h1>Divisibility Checker</h1>
+		</header>
+		<form id="mainForm">
+			<input type="number" id="input-1" placeholder="Divident" class="form-control"><br><br>
+			<input type="number" id="input-2" placeholder="Divisor" class="form-control"><br><br>
+			<button type="button" onclick="check();" class="btn btn-primary">Check</button>
+		</form>
+		<script>
+
+			
+
+			function check() {
+
+				var input1 = document.getElementById('input-1').value;
+				var input2 = document.getElementById('input-2').value;
+				var form = document.getElementById('mainForm');
+
+				if (input1 == "" || input2 == ""){
+					alert('Both Fields Are Required');
+					form.reset();
+				}
+				else if( Number(input1) % Number(input2) == 0){
+					alert('Perfectly Divisible');
+					form.reset();
+				}
+				else if( Number(input1) % Number(input2) != 0){
+					alert('Not Perfectly Divisible');
+				}
+
+
+			}
+		</script>
+	</div>
+</body>
+</html>
